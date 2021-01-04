@@ -12,6 +12,6 @@ docker push peekp/multi-server:$SHA
 docker push peekp/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployment/server-deployment=peekp/multi-server:$SHA
-kubectl set image deployment/client-deployment=peekp/multi-client:$SHA
-kubectl set image deployment/worker-deployment=peekp/multi-worker:$SHA
+kubectl set image deployments/server-deployment server=peekp/multi-server:$SHA
+kubectl set image deployments/client-deployment client=peekp/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=peekp/multi-worker:$SHA
