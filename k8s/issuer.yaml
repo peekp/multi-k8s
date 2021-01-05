@@ -8,7 +8,9 @@ spec:
     email: 'patrick.peek@pacurro.nl'
     privateKeySecretRef:
       name: letsencrypt-prod
-      solvers:
-      - http01:
-          ingress:
-            class: nginx
+    solvers:
+    - http01:
+        ingress:
+          class: nginx
+
+
